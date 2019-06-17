@@ -1,5 +1,5 @@
 FROM debian:buster
-RUN apt update && apt install -y curl python3 python3-pip bash-completion vim ipcalc groff unzip && \
+RUN apt update && apt install -y curl python3 python3-pip bash-completion vim ipcalc groff unzip watch && \
 	rm -Rf /var/cache/apt/*
 RUN pip3 install awscli --upgrade && \ 
 	echo "if [ -f /etc/bash_completion ]; then\n   . /etc/bash_completion\nfi\ncomplete -C '/usr/local/bin/aws_completer' aws" >> ~/.bashrc
